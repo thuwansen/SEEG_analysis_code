@@ -93,7 +93,7 @@ color_group = [243/255,164/255,0/255;
 	    end
 	end
 	save([Fig1c_path,'/all_subjects_coordinate.node'], 'all_subjects_coordinate','-ascii');
-![avatar](./Fig1.png)
+<img src="./Fig1.png" alt="avatar" style="zoom:80%;" />
 
 
 
@@ -103,11 +103,11 @@ color_group = [243/255,164/255,0/255;
 
 3. Fig3_main.m
 
-![avatar](./Fig3.png)
+<img src="./Fig3.png" alt="avatar" style="zoom:80%;" />
 
 4. Fig4_main.m
 
-![avatar](./Fig4.png)
+<img src="./Fig4.png" alt="avatar" style="zoom:80%;" />
 
 ## Copyright
 
