@@ -1,8 +1,8 @@
 
 # SEEG analysis
-![](D:\sen\github_thuwansen\SEEG_analysis_code\SEEG_operation.png)
-
 This repository contains code and demonstrations implementing the "SEEG analysis" representation introduced in: "Mapping brain dynamics in anesthesia-induced unconsciousness with a human stereoelectroencephalography resource".
+
+![](D:\sen\github_thuwansen\SEEG_analysis_code\SEEG_operation.png)
 
 ## Dependencies
 
@@ -72,40 +72,40 @@ color_group = [243/255,164/255,0/255;
                39/255,65/255,146/255];
 ```
 
-​		code section for Fig1c
+​		code section for Fig. 1c
 
-		Fig1c_path = [savepath,'\Fig1c'];
-		if ~exist(Fig1c_path)
+	Fig1c_path = [savepath,'\Fig1c'];
+	if ~exist(Fig1c_path)
 	    mkdir(Fig1c_path);
+	end
+	all_subjects_coordinate = [];
+	for idx =1:length(subs_name)
+	    if ~isempty(SEEG_coordinate_path{idx,1})
+	        tmp_coordinate = load(SEEG_coordinate_path{idx,1});   
+	        tmp_mni = tmp_coordinate.SEEG_COORDINATE.MNI_coordinate;
+	        [chan_num,~]=size(tmp_mni);
+	        final_coordinate = zeros(chan_num,6);
+	        final_coordinate(:,1:3)=tmp_mni;
+	        final_coordinate(:,4)=idx;
+	        final_coordinate(:,5)=idx;
+	        final_coordinate(:,6)=idx;
+	        all_subjects_coordinate=[all_subjects_coordinate; final_coordinate];
 	    end
-	    all_subjects_coordinate = [];
-	    for idx =1:length(subs_name)
-	        if ~isempty(SEEG_coordinate_path{idx,1})
-	            tmp_coordinate = load(SEEG_coordinate_path{idx,1});   
-	            tmp_mni = tmp_coordinate.SEEG_COORDINATE.MNI_coordinate;
-	            [chan_num,~]=size(tmp_mni);
-	            final_coordinate = zeros(chan_num,6);
-	            final_coordinate(:,1:3)=tmp_mni;
-	            final_coordinate(:,4)=idx;
-	            final_coordinate(:,5)=idx;
-	            final_coordinate(:,6)=idx;
-	            all_subjects_coordinate=[all_subjects_coordinate; final_coordinate];
-	        end
-	    end
-	    save([Fig1c_path,'/all_subjects_coordinate.node'], 'all_subjects_coordinate','-ascii');
+	end
+	save([Fig1c_path,'/all_subjects_coordinate.node'], 'all_subjects_coordinate','-ascii');
 ![Fig1](D:\sen\github_thuwansen\SEEG_analysis_code\Fig1.png)
 
 
 
-Fig2_main.m
+2. Fig2_main.m
 
 ![Fig2](D:\sen\github_thuwansen\SEEG_analysis_code\Fig2.png)
 
-Fig3_main.m
+3. Fig3_main.m
 
 ![Fig3](D:\sen\github_thuwansen\SEEG_analysis_code\Fig3.png)
 
-Fig4_main.m
+4. Fig4_main.m
 
 ![Fig4](D:\sen\github_thuwansen\SEEG_analysis_code\Fig4.png)
 
