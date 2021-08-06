@@ -2,7 +2,7 @@
 # SEEG analysis
 This repository contains code and demonstrations implementing the "SEEG analysis" representation introduced in: "Mapping brain dynamics in anesthesia-induced unconsciousness with a human stereoelectroencephalography resource".
 
-![](D:\sen\github_thuwansen\SEEG_analysis_code\SEEG_operation.png)
+![](.\SEEG_operation.png)
 
 ## Dependencies
 
@@ -93,21 +93,21 @@ color_group = [243/255,164/255,0/255;
 	    end
 	end
 	save([Fig1c_path,'/all_subjects_coordinate.node'], 'all_subjects_coordinate','-ascii');
-![Fig1](D:\sen\github_thuwansen\SEEG_analysis_code\Fig1.png)
+![Fig1](.\Fig1.png)
 
 
 
 2. Fig2_main.m
 
-![Fig2](D:\sen\github_thuwansen\SEEG_analysis_code\Fig2.png)
+![Fig2](.\Fig2.png)
 
 3. Fig3_main.m
 
-![Fig3](D:\sen\github_thuwansen\SEEG_analysis_code\Fig3.png)
+![Fig3](.\Fig3.png)
 
 4. Fig4_main.m
 
-![Fig4](D:\sen\github_thuwansen\SEEG_analysis_code\Fig4.png)
+![Fig4](.\Fig4.png)
 
 ## Copyright
 
